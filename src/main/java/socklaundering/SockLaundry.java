@@ -11,7 +11,7 @@ package socklaundering;
  */
 public class SockLaundry {
     
-    public int getMaximumPairOfSocks(int noOfWashes, int[] cleanPile, int[] dirtyPile) {
+  public int getMaximumPairOfSocks(int noOfWashes, int[] cleanPile, int[] dirtyPile) {
 
       int count = 0;
       int[] unwashed_map = new int[51];
@@ -34,7 +34,7 @@ public class SockLaundry {
           if(noOfWashes==0) break;
           if(clean_map[i]>0 && unwashed_map[i]>0){
               count++;
-              unwashed_map[clean_map[i]]-=1;
+              unwashed_map[i]-=1;
               noOfWashes--;
           }
       }
@@ -49,7 +49,6 @@ public class SockLaundry {
 
       return count;
  }
-
 
     
 }
